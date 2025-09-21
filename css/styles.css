@@ -64,6 +64,8 @@ h2, h3{
 /* HEADER START*/
 .header-main{
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+
 }
 .header-main .container{
     display: flex;
@@ -73,6 +75,9 @@ h2, h3{
     display: flex;
     align-items: center;
     
+}
+.address-menu{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .navigation-menu, .address-menu{
     display: flex;
@@ -94,13 +99,25 @@ h2, h3{
 }
 
 .navigation-menu-a{
-    color: #2E2f42;
+    color: #404bbf;
     font-weight: 500;
     font-size: 16px;
   line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
-    
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.navigation-menu-a:hover::after,
+.about-menu-a:hover::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border: 2px;
 }
 .navigation-menu-a:focus{
     color: #404bbf;
@@ -113,6 +130,8 @@ h2, h3{
     letter-spacing: 0.02em;
     font-style: normal;
     padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .header-adress{
     font-style: normal;
@@ -122,11 +141,13 @@ h2, h3{
 .section_one{
     background-color: #2E2F42;
     padding: 188px 0;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)) , url(/images/people-office\ 1.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+    max-width: 1440px;
+     background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+    
     
 }
 .container h1{
@@ -147,6 +168,7 @@ h2, h3{
     height: 56px;
     border: none;
     text-align: center;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container button{
     margin-top: 48px;
@@ -176,12 +198,14 @@ h2, h3{
 /*  SECTION 2 Start   */
 
 .about-menu-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
     border: 1px solid #8e8f99;
-border-radius: 4px;
-margin-bottom: 8px;
-width: 264px;
-height: 112px;
-padding: 24px 100px;
+    margin-bottom: 8px;
 }
 .section_two{
     padding: 120px 0;
@@ -264,33 +288,37 @@ padding: 24px 100px;
 }
 .team-menu-icons-carts{
     display: flex;
+    justify-content: center;
+    gap: 24px;
     
 }
 .icons-team{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 40px;
+}
+.icons-team-a{
+    width: 100%;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-team .icons-team-a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #4d5ae5;
+    
 }
-.icons-team .icons-team-a:hover{
-    background-color: #f4f4fd;
+.icons-team-a:focus{
+    background-color: #404bbf;
+}
+.icons-team-a:hover{
+    background-color: #404bbf;
 }
 .team-menu-icons{
     fill: #f4f4fd;
 }
 .icons-team .icons-team-a:hover .team-menu-icons{
     fill: #4d5ae5;
-}
-.team-menu-icons-carts .icons-team{
-    width: calc((100% - 72px) / 3);
 }
 /*  SECTION 3 END
     SECTION 4 START*/
@@ -303,7 +331,9 @@ padding: 24px 100px;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    
+}
+.portfolio-li:hover{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .portfolio{
     font-weight: 700;
@@ -333,44 +363,49 @@ padding: 24px 100px;
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    
-}
-.portfolio-li{
-    width: calc((100% - 48px) / 3);
-   
 }
 .portfolio-li{
     position: relative;
     overflow: hidden;
+    transition: box-shadow 250px cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc((100% - 48px) / 3);
 }
 .overlay{
-    padding: 40px 32px;
-font-family: "Roboto", sans-serif;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #f4f4fd;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-transform: 100%;
-transform: translateY(100%);
-transition: transform 250ms ease-in-out;
-background: #4d5ae5;
+    position: relative;
+    overflow: hidden;
 }
-.portfolio-li:hover .overlay{
-    transform: translateY(0);
+.overlay-text{
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-li:hover .overlay-text
+{
+transform: translateY(0%);
 }
 
 /* SECTION 4 END
     Footer START*/
 footer .container{
-    
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    align-items: baseline;
+}
+.fotter-one{
+    margin-right: 120px;
+}
+.fotter-two{
+
 }
 footer .container a{
     display: inline-block;
@@ -403,11 +438,8 @@ footer .container a{
     line-height: 1.16667;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    
     color: #F4F4FD;
-    
 }
-
 .fotter{
     background-color: #2E2F42;
     padding: 100px 0;
@@ -421,29 +453,42 @@ footer p{
 }
 .fotter-ul-menu{
     display: flex;
+    gap: 16px;
 }
 .text-icon{
+    font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
     margin-bottom: 16px;
+}
+.fi{
+     height: 40px;
+    width: 40px;
 }
 .fotter-ul-menu .fotter-a{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
+   width: 100%;
+   height: 100%;
     border-radius: 50%;
     background-color: #4d5ae5;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icons{
     fill: #f4f4fd;
 }
 .fotter-ul-menu .fotter-a:hover{
-    background-color: #2E2F42;
+    background-color: #31d0aa;
+}
+.fotter-a:focus{
+    background-color: #31d0aa;
 }
 .fotter-ul-menu .fotter-a:hover .footer-icons{
     fill: #4d5ae5;
 }
-.fotter-li .fotter-ul-menu li{
-    width: calc((100% - 48px) / 3);  
-}
+
 /* FOOTER END*/
