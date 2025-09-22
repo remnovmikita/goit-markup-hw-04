@@ -108,7 +108,7 @@ h2, h3{
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.navigation-menu-a:hover::after{
+.navigation-menu-a::after{
     content: "";
     width: 100%;
     position: absolute;
@@ -118,6 +118,7 @@ h2, h3{
     background-color: #404bbf;
     border: 2px;
 }
+
 .navigation-menu-a:focus{
     color: #404bbf;
 }
@@ -140,12 +141,10 @@ h2, h3{
 .section_one{
     background-color: #2E2F42;
     padding: 188px 0;
-    
-
 }
 .section_one{
-   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        
      background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -402,6 +401,7 @@ footer .container{
 }
 .fotter-one{
     margin-right: 120px;
+    
 }
 
 footer .container a{
@@ -410,6 +410,7 @@ footer .container a{
 .container a{
     display: inline-block;
 }
+
 .logo-footer-start{
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -436,6 +437,7 @@ footer .container a{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #F4F4FD;
+    ;
 }
 .fotter{
     background-color: #2E2F42;
