@@ -140,6 +140,7 @@ h2, h3{
 .section_one{
     background-color: #2E2F42;
     padding: 188px 0;
+    
 
 }
 .section_one{
@@ -148,6 +149,8 @@ h2, h3{
      background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 .section_one h1{
     margin: 0 auto;
@@ -158,6 +161,7 @@ h2, h3{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+
     color: #FFFFFF;
     cursor: pointer;
     display: block;
@@ -169,7 +173,7 @@ h2, h3{
     background-color: #4D5AE5;
     border-radius: 4px;
     padding: 16px 32px; 
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .maintextone{
@@ -181,13 +185,11 @@ h2, h3{
     max-width: 496px;
     text-align: center;
 }
-.section_one-btn:hover{
-    background-color: #404BBF;
-}
-
+.section_one-btn:hover,
 .section_one-btn:focus{
     background-color: #404BBF;
 }
+
 
 /* SECTION 1 End   */
 /*  SECTION 2 Start   */
@@ -292,7 +294,7 @@ h2, h3{
 }
 .icons-team-a{
     width: 100%;
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-team .icons-team-a{
     display: flex;
@@ -327,9 +329,7 @@ h2, h3{
     column-gap: 24px;
     row-gap: 48px;
 }
-.portfolio-li:hover{
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
+
 .portfolio{
     font-weight: 700;
     font-size: 36px;
@@ -359,11 +359,15 @@ h2, h3{
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-.portfolio-li{
+.portfolio-ul .portfolio-li{
     position: relative;
     overflow: hidden;
-    transition: box-shadow 250px cubic-bezier(0.4, 0, 0.2, 1);
+     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: calc((100% - 48px) / 3);
+}
+.portfolio-ul  .portfolio-li:hover,
+.portfolio-ul  .portfolio-li:focus{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .overlay{
     position: relative;
