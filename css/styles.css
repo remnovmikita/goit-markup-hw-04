@@ -97,7 +97,7 @@ h2, h3{
 .logo-studio{
     color: #2e2f42;
 }
-.navigation-menu-li{
+.navigation-menu .current{
     color: #404bbf;
 }
 .navigation-menu-a{
