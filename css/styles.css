@@ -97,9 +97,6 @@ h2, h3{
 .logo-studio{
     color: #2e2f42;
 }
-.current{
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
 .navigation-menu-a{
     color: #2e2f42;
     font-family: "Roboto", sans-serif;
@@ -112,11 +109,8 @@ h2, h3{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     
 }
-.navigation-menu-a:hover::after{
 
-}
-.current:hover:after,
-.current:focus::after{
+.navigation-menu-a .current::after{
     color: #404bbf;
     content: "";
     width: 100%;
@@ -126,10 +120,6 @@ h2, h3{
     height: 4px;
     background-color: #404bbf;
     border-radius: 2px;
-}
-
-.current:focus{
-    color: #404bbf;
 }
  .about-menu-a{
     color: #434455;
